@@ -11,12 +11,11 @@
 .features__item {
     width: calc((100% - 90px) / 4);
     margin-right: 30px;
-}
 
-.features__item:last-child {
-    margin-right: 0;
+    &:last-child {
+        margin-right: 0;
+    }
 }
-
 .features__text {
     font-size: 14px;
     line-height: 1.7;
@@ -45,6 +44,7 @@
     background-repeat: no-repeat;
     background-size: 70px;
     background-position: center;
+
 }
 
 .features__item:nth-child(1)::before {

@@ -11,16 +11,12 @@
     opacity: 1;
     transition: opacity 250ms var(--main-cub),
         visibility 250ms var(--main-cub);
-}
 
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
-
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.75);
+        &.is-hidden {
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+        }
 }
 
 .modal {
@@ -39,6 +35,10 @@
 
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--main-cub);
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.75);
+    }
 }
 
 
@@ -59,15 +59,15 @@
     opacity: 1;
 
     transition: opacity 250ms var(--main-cub);
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-text);
+    }
 }
 
 .exit-icon {
     padding: 1px;
     width: 11px;
     height: 11px;
-}
-
-.modal-button:hover,
-.modal-button:focus {
-    fill: var(--accent-text);
 }

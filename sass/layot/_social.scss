@@ -10,10 +10,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.social__item:last-child {
-    margin-right: 0;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .social__link {
@@ -26,6 +26,11 @@
     justify-content: center;
 
     transition: background-color 250ms var(--main-cub);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-text);
+    }
 }
 
 .social__icon {
@@ -34,14 +39,9 @@
     fill: #AFB1B8;
 
     transition: fill 250ms var(--main-cub);
-}
 
-.social__link:hover,
-.social__link:focus {
-    background-color: var(--accent-text);
-}
-
-.social__link:hover .social__icon,
-.social__link:focus .social__icon {
-    fill: var(--bgc);
+    .social__link:hover &,
+    .social__link:focus & {
+        fill: var(--bgc);
+    }
 }

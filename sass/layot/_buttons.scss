@@ -6,10 +6,10 @@
 
 .button__item {
     margin-right: 8px;
-}
 
-.button__item:last-child {
-    margin-right: 0;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .button__item button {
@@ -26,14 +26,13 @@
     padding: 6px 22px;
 
     transition: box-shadow 250ms var(--main-cub), background-color 250ms var(--main-cub), color 250ms var(--main-cub);
-}
 
-
-.button__item button:hover,
-.button__item button:focus {
-    background-color: var(--accent-text);
-    color: var(--bgc);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-                0px 1px 2px rgba(0, 0, 0, 0.08),
-                0px 2px 2px rgba(0, 0, 0, 0.12);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-text);
+        color: var(--bgc);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+            0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
 }

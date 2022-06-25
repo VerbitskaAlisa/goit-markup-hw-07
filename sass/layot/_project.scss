@@ -12,13 +12,13 @@
     display: block;
 
     transition: box-shadow 250ms var(--main-cub);
-}
 
-.project__link:hover,
-.project__link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
 }
 
 .project__item:nth-last-child(-n+3) {
@@ -54,10 +54,6 @@ li h2 {
     line-height: 1.87;
 }
 
-.project__item:hover .project-box {
-    transform: translateY(0);
-}
-
 .project-card {
     position: relative;
     overflow: hidden;
@@ -79,6 +75,10 @@ li h2 {
     background-color: rgba(33, 150, 243, 0.9);
 
     transition: transform 250ms var(--main-cub);
+
+    .project__item:hover & {
+        transform: translateY(0);
+    }
 }
 
 .project-box .project-box-text {

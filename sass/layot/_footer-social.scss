@@ -7,10 +7,10 @@
     width: 44px;
     height: 44px;
     margin-right: 10px;
-}
 
-.social-item:last-child {
-    margin-right: 0;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .social-item-link {
@@ -23,6 +23,11 @@
     justify-content: center;
 
     transition: background-color 250ms var(--main-cub);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-text);
+    }
 }
 
 .social-item-link .icon {
@@ -31,9 +36,4 @@
     fill: var(--bgc);
 
     transition: fill 250ms var(--main-cub);
-}
-
-.social-item-link:hover,
-.social-item-link:focus {
-    background-color: var(--accent-text);
 }

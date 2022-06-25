@@ -21,10 +21,10 @@
     width: 170px;
     height: 92px;
     margin-right: 30px;
-}
 
-.clients__item:last-child {
-    margin-right: 0;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .clients__link {
@@ -37,6 +37,11 @@
     justify-content: center;
 
     transition: border-color 250ms var(--main-cub);
+
+    &:hover,
+    &:focus {
+        border-color: var(--accent-text);
+    }
 }
 
 .clients__icon {
@@ -45,14 +50,9 @@
     fill: #AFB1B8;
 
     transition: fill 250ms var(--main-cub);
-}
-
-.clients__link:hover,
-.clients__link:focus {
-    border-color: var(--accent-text);
-}
-
-.clients__link:hover .clients__icon,
-.clients__link:focus .clients__icon {
-    fill: var(--accent-text);
+    
+    .clients__link:hover &,
+    .clients__link:focus & {
+        fill: var(--accent-text);
+    }
 }
